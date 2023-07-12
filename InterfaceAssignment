@@ -1,0 +1,38 @@
+interface Flyer
+{
+	void fly();
+}
+class Man
+{
+	String modeOfFly;
+	public Man(String modeOfFly)
+	{
+		this.modeOfFly=modeOfFly;
+	}
+	public void flying()
+	{
+		System.out.println("man is flying via"+modeOfFly);
+	}
+}
+class SuperMan extends Man implements Flyer
+{
+	public SuperMan(String modeOfFly)
+	{
+		super(modeOfFly);
+	}
+	public void fly()
+	{
+		System.out.println("Super man is flying");
+	}
+}
+class InterfaceAss
+{
+	public static void main(String args[])
+	{	
+		SuperMan s=new SuperMan(" aeroplane");
+		s.flying();
+		SuperMan sm=new SuperMan(" parasuit");
+		sm.flying();
+		s.fly();
+	}
+}
